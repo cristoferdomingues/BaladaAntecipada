@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="pt_br" ng-app="app">
+<head>
+		<title>Balada Antecipada</title>
+		<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+		<link rel="stylesheet" href="css/fullcalendar.css" />	
+		<link rel="stylesheet" href="css/unicorn.main.css" />
+		<link rel="stylesheet" href="css/unicorn.grey.css" class="skin-color"/>
+		<link rel="stylesheet" href="css/chosen.css" />
+	</head>
+	<body ng-controller="workspaceController">
+		<div id="header">
+			<h1><a href="dashboard.html">Balada Antecipada</a></h1>		
+		</div>
+		
+		<div id="search">
+			<input type="text" placeholder="Procurar..."/><button type="submit" class="tip-right" title="Buscar"><i class="icon-search icon-white"></i></button>
+		</div>
+		<div id="user-nav" class="navbar">
+            <navbar/>
+        </div>
+            
+		<div id="sidebar">
+		<a href="#" class="visible-phone"><i class="icon {{module.icon}}"></i>{{module.title}}</a>
+			<sidebar/>
+		</div>
+		<div id="content">
+			<div id="content-header">
+				<h1>{{module.title}}</h1>
+				<management/>
+			</div>
+			<div id="breadcrumb">
+				<a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i>Home</a>
+				<a href="{{bread.link}}" class="current" ng-repeat="bread in module.breadCrumb">{{bread.title}}</a>
+			</div>
+			<div class="container-fluid">
+				<div class="row-fluid"  ng-view></div>
+				<div class="row-fluid">
+					<div id="footer" class="span12">
+						2012 &copy; BlackLion Admin <a href="#">BlackLion Web</a>
+					</div>
+				</div>
+			</div>
+		</div>
+			<!--Jquery Plugins-->
+            <script src="js/libs/jquery/jquery.min.js"></script>
+            <script src="js/libs/jquery/jquery.ui.custom.js"></script>
+			<script src="js/libs/jquery/fullcalendar.min.js"></script>
+            <script src="js/libs/jquery/jquery.isloading.min.js"></script>
+			<script src="js/libs/jquery/jquery.dataTables.min.js"></script>
+			<script src="js/libs/jquery/jquery.uniform.js"></script>
+			<script src="js/libs/jquery/jquery.chosen.js"></script>
+			
+			<!--Bootstrap Plugins-->
+			<script src="js/libs/bootstrap/bootstrap.min.js"></script>
+			<script src="js/libs/bootstrap/bootbox.js"></script>
+			
+			<!--AngularJS Plugins-->
+			<script src="js/libs/angular/angular.min.js"></script>
+			<script src="js/libs/angular/angular-resource.min.js"></script>
+			
+			<!--Misc-->
+			<script src="js/libs/highcharts/highcharts.js"></script>
+			<script src="js/libs/ckeditor/ckeditor.js"></script>
+			<script src="js/unicorn.js"></script>
+			
+			<!--Components-->
+			<script src="js/templates/componentes.js"></script>
+			<script src="js/templates/highchart.js"></script>
+           
+			<!--Main-->
+			<script src="js/app.js"></script>
+			
+			<!--Modulos-->
+			<script src="js/modulos/workspace/workspace.js"></script>
+			<script src="js/modulos/teste/teste.js"></script>
+			<script src="js/modulos/bares/bares.js"></script>
+			<script src="js/modulos/bares/baresService.js"></script>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+﻿<div class="span12" id="container">
+	<div class="widget-box">
+		<div class="widget-title">
+		<span class="icon"><i class="{{module.icon}}"></i></span>
+			<h5>{{module.title}}</h5>
+		</div>
+		<div class="widget-content">
+			<div class="row-fluid">
+				<div class="span12">
+					<form class="form-horizontal" name="form" ng-submit="salvar()">
+						<fieldset>
+							<div class="linha">
+							 <label>Nome</label>
+							 <input type="text" required id="nome" class="span12" ng-model="bar.nome"/>
+							</div>
+							<div class="linha">
+								<label>CNPJ</label>
+								<input type="text" required id="cnpj" class="span12" ng-model="bar.cnpj"/>
+							</div>
+							<div class="linha">
+								<label>Endereço</label>
+								<input type="text" required id="cnpj" class="span12" ng-model="bar.endereco"/>
+							</div>
+							<div class="linha">
+								<label>Status</label>
+								<select required ng-model="bar.status" data-placeholder="Selecione" id="status">
+									<option></option>
+									<option value="A">ATIVO</option>
+									<option value="I">INATIVO</option>
+								</select>
+							</div>
+							<div class="linha">
+							 <label>Observações</label>
+							 <textarea class="ckeditor" name="descricao" id="descricao" rows="10" cols="80" ng-model="bar.observacao"></textarea>
+							</div>
+							<div class="linha">
+							 <div class="span5" style="float:left; margin:0px">
+								<a class="btn btn-danger btn-large" style="float:left" href="javascript:void(0)" ng-click="cancelar()">
+									<i class="icon-ban-circle icon-white"></i>&nbsp;Cancelar
+								</a>
+							 </div>
+							 <div class="span5" style="float:right">
+								<button class="btn btn-primary btn-large" style="float:right" ng-disabled="form.$invalid">
+									<i class="icon-hdd icon-white"></i>&nbsp;Salvar
+								</button>
+							 </div>
+							 </div>
+						</fieldset>
+						<input type="hidden" id="id" ng-model="bar.id"/>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

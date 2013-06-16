@@ -1,0 +1,49 @@
+﻿<div class="span12" id="container">
+	<div class="widget-box">
+		<div class="widget-title">
+		<span class="icon"><i class="{{module.icon}}"></i></span>
+			<h5>{{module.title}}</h5>
+			<div class="buttons">
+				<a href="#/bares/new/" class="btn  btn-mini">
+					<i class="icon-plus-sign"></i> Novo Registro
+				</a>
+			</div>
+		</div>
+		<div class="widget-content nopadding">
+			<table class="table table-bordered data-table">
+				<thead>
+					<tr>
+						<th>Código</th>
+						<th>Nome</th>
+						<th>Status</th>
+						<th>Ação</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="gradeX"  ng-repeat="item in bares | orderBy:id">
+						<td class="center">{{item.id}}</td>
+						<td align="left">{{item.nome}}</td>
+						<td class="center" ng-switch on="item.status">
+							<span ng-switch-when="A">Ativo</span>
+							<span ng-switch-when="I">Inativo</span>
+						</td>
+						<td class="center">
+							<ul class="ulAcao">
+								<li>
+									<button class="tip-bottom btn btn-primary btn-mini" title="Editar" ng-click="editar(item)">
+										<i class="icon-pencil icon-white"></i>
+									</button>
+								</li>
+								<li>
+									<button  class="tip-bottom btn btn-danger btn-mini" title="Apagar" ng-click="apagar(item)">
+										<i class="icon-trash icon-white"></i>
+									</button>
+								</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

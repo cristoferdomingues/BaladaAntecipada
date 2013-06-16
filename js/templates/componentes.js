@@ -61,7 +61,7 @@
 			$scope.comments = 10;
 		},
 		template:'<div class="btn-group">'+
-					'<a class="btn btn-large tip-bottom" title="Gerenciar Arquivos"><i class="icon-file"></i></a>'+
+					'<a class="btn btn-large tip-bottom" title="Gerenciar Bares" href="#/bares"><i class="icon-glass"></i></a>'+
 					'<a class="btn btn-large tip-bottom" title="Gerenciar Usuários"><i class="icon-user"></i></a>'+
 					'<a class="btn btn-large tip-bottom" title="Gerenciar Comentários"><i class="icon-comment">'+
 					'</i><span class="label label-important">{{comments}}</span>'+

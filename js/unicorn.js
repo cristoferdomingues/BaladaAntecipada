@@ -1,7 +1,5 @@
 $(document).ready(function(){
-	menuActiveManagement();
-	
-	
+	menuActiveManagement();	
 	// === Sidebar navigation === //
 	
 	$('.submenu > a').click(function(e)
